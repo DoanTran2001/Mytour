@@ -1,0 +1,2341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Mytour</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <div class="header-left">
+          <a href="">
+            <img
+              src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_logo_mytour_white.svg"
+              alt=""
+            />
+          </a>
+          <a href=""> Khách sạn </a>
+          <a href=""> Vé máy bay </a>
+          <a href=""> Tour & sự kiện </a>
+          <a href=""> The Memories </a>
+        </div>
+        <div class="header-right">
+          <div class="header-right-content">
+            <div class="header-right-item">
+              <i class="fab fa-acquisitions-incorporated"></i>
+              <span>Hợp tác với chúng tôi</span>
+            </div>
+            <div class="header-right-item">
+              <i class="fas fa-phone"></i>
+              <span>1232412</span>
+            </div>
+            <div class="header-right-item">
+              <div class="header-right-icon header-notifi">
+                <i class="fas fa-bell"></i>
+              </div>
+              <div class="header-noti" id="header-noti">
+                <img
+                  src="	https://storage.googleapis.com/tripi-assets/mytour/icons/notification/icon_notification_empty.svg"
+                  alt=""
+                />
+                <p>Không có thông báo nào</p>
+              </div>
+            </div>
+            <div class="header-right-item">
+              <div class="header-right-icon header-signs">
+                <i class="fas fa-user"></i>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="header-sign">
+                <div class="header-sign-item" id="login">Đăng nhập</div>
+                <div class="header-sign-item">Đăng kí</div>
+              </div>
+            </div>
+          </div>
+          <div class="header-right-menu">
+            <div>
+              <i class="fas fa-bars"></i>
+            </div>
+            <div class="header-menu-more">
+              <div class="header-menu-close">
+                <i class="fas fa-times"></i>
+              </div>
+              <div class="header-menu-list">
+                <div class="header-menu-item">
+                  <svg width="20" height="20" fill="none">
+                    <path
+                      d="M17.26 6.568l-5.555-4.317a2.779 2.779 0 00-3.41 0L2.739 6.568a2.774 2.774 0 00-1.072 2.19v7.494a2.08 2.08 0 002.083 2.081h12.5a2.084 2.084 0 002.083-2.081V8.759c0-.857-.395-1.665-1.073-2.19z"
+                      fill="#00B6F3"
+                      stroke="#00B6F3"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M13.722 12.803c-2.072 1.25-5.43 1.25-7.5 0"
+                      stroke="#fff"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Trang chủ</p>
+                </div>
+                <div class="header-menu-item">
+                  <svg width="20" height="20" fill="none">
+                    <path
+                      d="M5.709 1.667c-1.357 0-2.656.606-3.571 1.66C1.07 4.562.638 6.3.916 8.22 1.542 12.536 6 16.172 10 17.817c4-1.645 8.454-5.28 9.083-9.597.279-1.92-.154-3.658-1.222-4.893-.912-1.054-2.214-1.66-3.568-1.66-1.366 0-2.645.624-3.602 1.755l-.688.815-.688-.815c-.962-1.131-2.241-1.755-3.607-1.755z"
+                      fill="#00B6F3"
+                      stroke="#00B6F3"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Yêu thích</p>
+                </div>
+              </div>
+              <div class="header-menu-list">
+                <div class="header-menu-item">
+                  <svg width="20" height="20" fill="none">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M2.25 2.5A2.5 2.5 0 014.75 0h10a2.5 2.5 0 012.5 2.5v15a1.25 1.25 0 010 2.5H13.5a1.25 1.25 0 01-1.25-1.25v-2.5A1.25 1.25 0 0011 15H8.5a1.25 1.25 0 00-1.25 1.25v2.5A1.25 1.25 0 016 20H2.25a1.25 1.25 0 010-2.5v-15zM6 3.75h2.5v2.5H6v-2.5zm2.5 5H6v2.5h2.5v-2.5zm2.5-5h2.5v2.5H11v-2.5zm2.5 5H11v2.5h2.5v-2.5z"
+                      fill="#FFBC39"
+                    ></path>
+                  </svg>
+                  <p>Khách sạn</p>
+                </div>
+                <div class="header-menu-item">
+                  <svg width="20" height="20" fill="none">
+                    <g clip-path="url(#icon_flight_ticket_svg__clip0)">
+                      <path
+                        d="M12.608 3.813a.5.5 0 00.486-.129L16.11.667a2.278 2.278 0 113.222 3.222l-3.017 3.017a.5.5 0 00-.13.485l2.265 8.301a.5.5 0 01-.129.485l-1.743 1.743a.5.5 0 01-.79-.11l-3.384-6.091a.5.5 0 00-.79-.111l-2.608 2.607a.5.5 0 00-.146.353v2.808a.5.5 0 01-.147.354l-1.698 1.698a.5.5 0 01-.828-.195l-1.276-3.829a.5.5 0 00-.316-.316L.768 13.812a.5.5 0 01-.196-.828l1.698-1.698a.5.5 0 01.354-.147h2.808a.5.5 0 00.353-.146l2.607-2.607a.5.5 0 00-.11-.79L2.19 4.21a.5.5 0 01-.111-.79l1.742-1.743a.5.5 0 01.486-.129l8.3 2.264z"
+                        fill="#FF1284"
+                      ></path>
+                    </g>
+                    <defs>
+                      <clipPath id="icon_flight_ticket_svg__clip0">
+                        <path fill="#fff" d="M0 0h20v20H0z"></path>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <p>Vé máy bay</p>
+                </div>
+                <div class="header-menu-item">
+                  <svg width="20" height="20" fill="none">
+                    <path
+                      d="M6.97 4.697v-1.03a2 2 0 012-2h2.06a2 2 0 012 2v1.03"
+                      stroke="#00B6F3"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="square"
+                    ></path>
+                    <path
+                      d="M16.333 4.697H3.667a2 2 0 00-2 2v5.09a2 2 0 002 2h12.666a2 2 0 002-2v-5.09a2 2 0 00-2-2z"
+                      fill="#00B6F3"
+                      stroke="#00B6F3"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="square"
+                    ></path>
+                    <path
+                      d="M17.576 16.06v.273a2 2 0 01-2 2H4.424a2 2 0 01-2-2v-.272"
+                      fill="#00B6F3"
+                    ></path>
+                    <path
+                      d="M17.576 16.06v.273a2 2 0 01-2 2H4.424a2 2 0 01-2-2v-.272"
+                      stroke="#00B6F3"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                    ></path>
+                    <path
+                      d="M10.758 7.727H9.242a1.515 1.515 0 100 3.03h1.515a1.515 1.515 0 000-3.03z"
+                      stroke="#fff"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="square"
+                    ></path>
+                  </svg>
+                  <p>Tour và sự kiện</p>
+                </div>
+                <div class="header-menu-item">
+                  <svg width="20" height="20" fill="none">
+                    <g clip-path="url(#icon_wedding_svg__clip0)">
+                      <path
+                        d="M19.167 0H.833A.833.833 0 000 .833v18.334c0 .46.373.833.833.833h18.334c.46 0 .833-.373.833-.833V.833A.833.833 0 0019.167 0z"
+                        fill="#fff"
+                      ></path>
+                      <path
+                        d="M5.583 7.864a.208.208 0 01-.016-.354 3.232 3.232 0 10-3.628 0 .208.208 0 01-.016.354A3.75 3.75 0 000 11.136v2.223a.417.417 0 00.417.417h.904a.417.417 0 01.417.379l.487 5.466a.416.416 0 00.417.38H4.86a.416.416 0 00.417-.38l.488-5.466a.417.417 0 01.417-.38h.9a.417.417 0 00.417-.416v-2.223a3.75 3.75 0 00-1.917-3.272zm-1.208 2.64a.625.625 0 01-1.25 0V9.185a.625.625 0 011.25 0v1.32zM3.75 6.403a1.563 1.563 0 01-1.508-1.981.207.207 0 01.305-.124 3.963 3.963 0 002.52.506.207.207 0 01.233.233 1.567 1.567 0 01-1.55 1.365zM14.167 0a5.84 5.84 0 00-5.834 5.833v6.25A1.666 1.666 0 0010 13.75h.167l-.75 2.237a.833.833 0 00.791 1.096h1a.416.416 0 01.417.358l.263 1.844a.833.833 0 00.825.715h2.917a.833.833 0 00.825-.715l.263-1.844a.417.417 0 01.413-.358h1a.833.833 0 00.79-1.096l-.754-2.237h.166A1.667 1.667 0 0020 12.083v-6.25A5.84 5.84 0 0014.167 0zm2.681 15.333a.209.209 0 01-.166.084h-.64a.833.833 0 00-.825.715l-.289 2.022a.21.21 0 01-.206.18h-1.11a.207.207 0 01-.206-.18l-.29-2.022a.834.834 0 00-.824-.715h-.638a.21.21 0 01-.206-.177.209.209 0 01.008-.098l1.033-3.1c.077-.23.2-.443.363-.624a.208.208 0 01.334.036l.589 1.028a.448.448 0 00.778 0l.59-1.028a.208.208 0 01.333-.036c.163.181.286.394.363.625l1.033 3.1a.209.209 0 01-.024.19zm-4.675-8.06a.205.205 0 01.073-.226.208.208 0 01.076-.036 3.597 3.597 0 001.563-.846.417.417 0 01.563 0c.442.408.98.7 1.564.846a.206.206 0 01.148.262 2.083 2.083 0 01-3.987 0zm6.16 4.394a.417.417 0 01-.814.131l-.094-.282a3.428 3.428 0 00-1.35-1.77.206.206 0 01-.092-.171.21.21 0 01.088-.173 3.334 3.334 0 10-3.809 0 .21.21 0 010 .344 3.429 3.429 0 00-1.35 1.77l-.094.282a.417.417 0 01-.818-.131V5.833a4.167 4.167 0 018.333 0v5.834z"
+                        fill="#F36"
+                      ></path>
+                    </g>
+                    <defs>
+                      <clipPath id="icon_wedding_svg__clip0">
+                        <path fill="#fff" d="M0 0h20v20H0z"></path>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <p>The memories</p>
+                </div>
+              </div>
+              <div class="header-menu-list">
+                <div class="header-menu-item">
+                  <svg width="20" height="20" fill="none">
+                    <path
+                      d="M17.26 6.568l-5.555-4.317a2.779 2.779 0 00-3.41 0L2.739 6.568a2.774 2.774 0 00-1.072 2.19v7.494a2.08 2.08 0 002.083 2.081h12.5a2.084 2.084 0 002.083-2.081V8.759c0-.857-.395-1.665-1.073-2.19z"
+                      fill="#00B6F3"
+                      stroke="#00B6F3"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M13.722 12.803c-2.072 1.25-5.43 1.25-7.5 0"
+                      stroke="#fff"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Trang chủ</p>
+                </div>
+                <div class="header-menu-item">
+                  <svg width="20" height="20" fill="none">
+                    <path
+                      d="M5.709 1.667c-1.357 0-2.656.606-3.571 1.66C1.07 4.562.638 6.3.916 8.22 1.542 12.536 6 16.172 10 17.817c4-1.645 8.454-5.28 9.083-9.597.279-1.92-.154-3.658-1.222-4.893-.912-1.054-2.214-1.66-3.568-1.66-1.366 0-2.645.624-3.602 1.755l-.688.815-.688-.815c-.962-1.131-2.241-1.755-3.607-1.755z"
+                      fill="#00B6F3"
+                      stroke="#00B6F3"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Yêu thích</p>
+                </div>
+              </div>
+              <div class="header-menu-list">
+                <div class="header-menu-item">
+                  <svg width="20" height="20" fill="none">
+                    <path
+                      d="M17.26 6.568l-5.555-4.317a2.779 2.779 0 00-3.41 0L2.739 6.568a2.774 2.774 0 00-1.072 2.19v7.494a2.08 2.08 0 002.083 2.081h12.5a2.084 2.084 0 002.083-2.081V8.759c0-.857-.395-1.665-1.073-2.19z"
+                      fill="#00B6F3"
+                      stroke="#00B6F3"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M13.722 12.803c-2.072 1.25-5.43 1.25-7.5 0"
+                      stroke="#fff"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Trang chủ</p>
+                </div>
+                <div class="header-menu-item">
+                  <svg width="20" height="20" fill="none">
+                    <path
+                      d="M5.709 1.667c-1.357 0-2.656.606-3.571 1.66C1.07 4.562.638 6.3.916 8.22 1.542 12.536 6 16.172 10 17.817c4-1.645 8.454-5.28 9.083-9.597.279-1.92-.154-3.658-1.222-4.893-.912-1.054-2.214-1.66-3.568-1.66-1.366 0-2.645.624-3.602 1.755l-.688.815-.688-.815c-.962-1.131-2.241-1.755-3.607-1.755z"
+                      fill="#00B6F3"
+                      stroke="#00B6F3"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Yêu thích</p>
+                </div>
+              </div>
+              <div class="header-menu-list">
+                <div class="header-menu-item">
+                  <svg width="20" height="20" fill="none">
+                    <path
+                      d="M17.26 6.568l-5.555-4.317a2.779 2.779 0 00-3.41 0L2.739 6.568a2.774 2.774 0 00-1.072 2.19v7.494a2.08 2.08 0 002.083 2.081h12.5a2.084 2.084 0 002.083-2.081V8.759c0-.857-.395-1.665-1.073-2.19z"
+                      fill="#00B6F3"
+                      stroke="#00B6F3"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M13.722 12.803c-2.072 1.25-5.43 1.25-7.5 0"
+                      stroke="#fff"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Trang chủ</p>
+                </div>
+                <div class="header-menu-item">
+                  <svg width="20" height="20" fill="none">
+                    <path
+                      d="M5.709 1.667c-1.357 0-2.656.606-3.571 1.66C1.07 4.562.638 6.3.916 8.22 1.542 12.536 6 16.172 10 17.817c4-1.645 8.454-5.28 9.083-9.597.279-1.92-.154-3.658-1.222-4.893-.912-1.054-2.214-1.66-3.568-1.66-1.366 0-2.645.624-3.602 1.755l-.688.815-.688-.815c-.962-1.131-2.241-1.755-3.607-1.755z"
+                      fill="#00B6F3"
+                      stroke="#00B6F3"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Yêu thích</p>
+                </div>
+              </div>
+              <div class="header-menu-list">
+                <div class="header-menu-item">
+                  <svg width="20" height="20" fill="none">
+                    <path
+                      d="M17.26 6.568l-5.555-4.317a2.779 2.779 0 00-3.41 0L2.739 6.568a2.774 2.774 0 00-1.072 2.19v7.494a2.08 2.08 0 002.083 2.081h12.5a2.084 2.084 0 002.083-2.081V8.759c0-.857-.395-1.665-1.073-2.19z"
+                      fill="#00B6F3"
+                      stroke="#00B6F3"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M13.722 12.803c-2.072 1.25-5.43 1.25-7.5 0"
+                      stroke="#fff"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Trang chủ</p>
+                </div>
+                <div class="header-menu-item">
+                  <svg width="20" height="20" fill="none">
+                    <path
+                      d="M5.709 1.667c-1.357 0-2.656.606-3.571 1.66C1.07 4.562.638 6.3.916 8.22 1.542 12.536 6 16.172 10 17.817c4-1.645 8.454-5.28 9.083-9.597.279-1.92-.154-3.658-1.222-4.893-.912-1.054-2.214-1.66-3.568-1.66-1.366 0-2.645.624-3.602 1.755l-.688.815-.688-.815c-.962-1.131-2.241-1.755-3.607-1.755z"
+                      fill="#00B6F3"
+                      stroke="#00B6F3"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Yêu thích</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-center">
+        <div class="header-center-wrap">
+          <div class="header-center-title">
+            <div class="header-center-title1">
+              <p>Khách sạn</p>
+              <div></div>
+            </div>
+            <div class="header-center-title2">
+              <p>Chuyến bay</p>
+              <div></div>
+            </div>
+          </div>
+          <div class="header-center-content">
+            <div class="header-center-location">
+              <p>Địa điểm</p>
+              <input type="text" placeholder="Thành phố, khách sạn, điểm đến" />
+              <div class="header-center-line"></div>
+              <div class="header-location-more">
+                <p>Tìm kiếm gần đây</p>
+                <div class="header-location-item">
+                  <svg width="20" height="20" fill="none">
+                    <path
+                      d="M10 6.667V10l1.667 1.667"
+                      stroke="#718096"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M2.542 9.167a7.5 7.5 0 11.416 3.333m-.416 4.167V12.5h4.166"
+                      stroke="#718096"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Thừa Thiên Huế</p>
+                </div>
+                <p>Địa điểm nổi bật</p>
+                <div class="header-location-item">
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="none"
+                    class="svgFillAll"
+                    style="
+                      stroke: rgb(113, 128, 150);
+                      width: 18px;
+                      height: 20px;
+                    "
+                  >
+                    <path
+                      d="M8 9.333a2 2 0 100-4 2 2 0 000 4z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M11.771 11.105l-2.828 2.828a1.333 1.333 0 01-1.885 0l-2.83-2.828a5.333 5.333 0 117.543 0v0z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>TP Hồ Chí Minh</p>
+                </div>
+                <div class="header-location-item">
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="none"
+                    class="svgFillAll"
+                    style="
+                      stroke: rgb(113, 128, 150);
+                      width: 18px;
+                      height: 20px;
+                    "
+                  >
+                    <path
+                      d="M8 9.333a2 2 0 100-4 2 2 0 000 4z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M11.771 11.105l-2.828 2.828a1.333 1.333 0 01-1.885 0l-2.83-2.828a5.333 5.333 0 117.543 0v0z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Hà Nội</p>
+                </div>
+                <div class="header-location-item">
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="none"
+                    class="svgFillAll"
+                    style="
+                      stroke: rgb(113, 128, 150);
+                      width: 18px;
+                      height: 20px;
+                    "
+                  >
+                    <path
+                      d="M8 9.333a2 2 0 100-4 2 2 0 000 4z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M11.771 11.105l-2.828 2.828a1.333 1.333 0 01-1.885 0l-2.83-2.828a5.333 5.333 0 117.543 0v0z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Đà Nẵng</p>
+                </div>
+                <div class="header-location-item">
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="none"
+                    class="svgFillAll"
+                    style="
+                      stroke: rgb(113, 128, 150);
+                      width: 18px;
+                      height: 20px;
+                    "
+                  >
+                    <path
+                      d="M8 9.333a2 2 0 100-4 2 2 0 000 4z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M11.771 11.105l-2.828 2.828a1.333 1.333 0 01-1.885 0l-2.83-2.828a5.333 5.333 0 117.543 0v0z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Hà Tĩnh</p>
+                </div>
+                <div class="header-location-item">
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="none"
+                    class="svgFillAll"
+                    style="
+                      stroke: rgb(113, 128, 150);
+                      width: 18px;
+                      height: 20px;
+                    "
+                  >
+                    <path
+                      d="M8 9.333a2 2 0 100-4 2 2 0 000 4z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M11.771 11.105l-2.828 2.828a1.333 1.333 0 01-1.885 0l-2.83-2.828a5.333 5.333 0 117.543 0v0z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Nghệ An</p>
+                </div>
+                <div class="header-location-item">
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="none"
+                    class="svgFillAll"
+                    style="
+                      stroke: rgb(113, 128, 150);
+                      width: 18px;
+                      height: 20px;
+                    "
+                  >
+                    <path
+                      d="M8 9.333a2 2 0 100-4 2 2 0 000 4z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M11.771 11.105l-2.828 2.828a1.333 1.333 0 01-1.885 0l-2.83-2.828a5.333 5.333 0 117.543 0v0z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Sa Pa</p>
+                </div>
+                <div class="header-location-item">
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="none"
+                    class="svgFillAll"
+                    style="
+                      stroke: rgb(113, 128, 150);
+                      width: 18px;
+                      height: 20px;
+                    "
+                  >
+                    <path
+                      d="M8 9.333a2 2 0 100-4 2 2 0 000 4z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M11.771 11.105l-2.828 2.828a1.333 1.333 0 01-1.885 0l-2.83-2.828a5.333 5.333 0 117.543 0v0z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Nha Trang</p>
+                </div>
+                <div class="header-location-item">
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="none"
+                    class="svgFillAll"
+                    style="
+                      stroke: rgb(113, 128, 150);
+                      width: 18px;
+                      height: 20px;
+                    "
+                  >
+                    <path
+                      d="M8 9.333a2 2 0 100-4 2 2 0 000 4z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M11.771 11.105l-2.828 2.828a1.333 1.333 0 01-1.885 0l-2.83-2.828a5.333 5.333 0 117.543 0v0z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Hạ Long</p>
+                </div>
+                <div class="header-location-item">
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="none"
+                    class="svgFillAll"
+                    style="
+                      stroke: rgb(113, 128, 150);
+                      width: 18px;
+                      height: 20px;
+                    "
+                  >
+                    <path
+                      d="M8 9.333a2 2 0 100-4 2 2 0 000 4z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M11.771 11.105l-2.828 2.828a1.333 1.333 0 01-1.885 0l-2.83-2.828a5.333 5.333 0 117.543 0v0z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Phú Quốc</p>
+                </div>
+                <div class="header-location-item">
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="none"
+                    class="svgFillAll"
+                    style="
+                      stroke: rgb(113, 128, 150);
+                      width: 18px;
+                      height: 20px;
+                    "
+                  >
+                    <path
+                      d="M8 9.333a2 2 0 100-4 2 2 0 000 4z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M11.771 11.105l-2.828 2.828a1.333 1.333 0 01-1.885 0l-2.83-2.828a5.333 5.333 0 117.543 0v0z"
+                      stroke="#1A202C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <p>Hội An</p>
+                </div>
+              </div>
+            </div>
+            <div class="header-center-date">
+              <div class="header-center-arrival">
+                <p>Ngày đến</p>
+                <h3>T2, 23 Tháng 08</h3>
+              </div>
+              <div class="header-center-return">
+                <p>Ngày về</p>
+                <h3>T3, 24 Tháng 08</h3>
+              </div>
+            </div>
+            <div class="header-center-number">
+              <p>Số phòng, số khách</p>
+              <h3>
+                <span class="room">1</span> phòng,
+                <span class="parents">1</span> người lớn,
+                <span class="childrents">0</span> trẻ em
+              </h3>
+              <div class="header-number-more">
+                <div class="header-number-item">
+                  <span>Phòng</span>
+                  <div class="header-number-content">
+                    <div class="header-number-minus">
+                      <i class="fas fa-minus"></i>
+                    </div>
+                    <span>1</span>
+                    <div class="header-number-plus">
+                      <i class="fas fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-number-item">
+                  <span>Người lớn</span>
+                  <div class="header-number-content">
+                    <div class="header-number-minus">
+                      <i class="fas fa-minus"></i>
+                    </div>
+                    <span>1</span>
+                    <div class="header-number-plus">
+                      <i class="fas fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-number-item">
+                  <span>Trẻ em</span>
+                  <div class="header-number-content">
+                    <div class="header-number-minus">
+                      <i class="fas fa-minus"></i>
+                    </div>
+                    <span>0</span>
+                    <div class="header-number-plus">
+                      <i class="fas fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-center-search">
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="youlike">
+        <div class="youlike-title">
+          <p>Có thể bạn sẽ thích</p>
+          <p>Khách sạn HOT nhất do Mytour đề xuất</p>
+        </div>
+        <div class="youlike-content">
+          <div class="youlike-item">
+            <a href="./place.html" target="_blank">
+              <div class="youlike-item-header">
+                <img
+                  src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzb3J0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                  alt=""
+                />
+                <div class="youlike-item-discount">
+                  <span>-5%</span>
+                </div>
+                <div class="youlike-item-icon">
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+              <div class="youlike-item-body">
+                <h6>Radisson Blu Resort Cam Ranh</h6>
+                <div class="youlike-item-star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="youlike-item-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Thành phố Cam Ranh</span>
+                </div>
+                <div class="youlike-reviews">
+                  <span>10</span>
+                  <p>Tuyệt vời <span>(61 đánh giá)</span></p>
+                </div>
+                <div class="youlike-price">
+                  <span>1.590.252đ</span>
+                  <span>1.516.731đ</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="youlike-item">
+            <a href="#">
+              <div class="youlike-item-header">
+                <img
+                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzb3J0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                  alt=""
+                />
+                <div class="youlike-item-discount">
+                  <span>-11%</span>
+                </div>
+                <div class="youlike-item-icon">
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+              <div class="youlike-item-body">
+                <h6>Khách sạn Eastin Grand Nha Trang</h6>
+                <div class="youlike-item-star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="youlike-item-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Thành phố Nha Trang</span>
+                </div>
+                <div class="youlike-reviews">
+                  <span>9.6</span>
+                  <p>Tuyệt vời <span>(61 đánh giá)</span></p>
+                </div>
+                <div class="youlike-price">
+                  <span>684.097đ</span>
+                  <span>614.822đ</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="youlike-item">
+            <a href="#">
+              <div class="youlike-item-header">
+                <img
+                  src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmVzb3J0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                  alt=""
+                />
+                <div class="youlike-item-discount">
+                  <span>-35%</span>
+                </div>
+                <div class="youlike-item-icon">
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+              <div class="youlike-item-body">
+                <h6>SOL By Melia Phú Quốc</h6>
+                <div class="youlike-item-star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="youlike-item-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Phú Quốc</span>
+                </div>
+                <div class="youlike-reviews">
+                  <span>8.8</span>
+                  <p>Tuyệt vời <span>(377 đánh giá)</span></p>
+                </div>
+                <div class="youlike-price">
+                  <span>1.988.981đ</span>
+                  <span>1.265.385đ</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="youlike-item">
+            <a href="#">
+              <div class="youlike-item-header">
+                <img
+                  src="https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVzb3J0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                  alt=""
+                />
+                <div class="youlike-item-discount">
+                  <span>-21%</span>
+                </div>
+                <div class="youlike-item-icon">
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+              <div class="youlike-item-body">
+                <h6>Eden Resort Phú Quốc</h6>
+                <div class="youlike-item-star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="youlike-item-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Phú Quốc</span>
+                </div>
+                <div class="youlike-reviews">
+                  <span>8.6</span>
+                  <p>Tuyệt vời <span>(1285 đánh giá)</span></p>
+                </div>
+                <div class="youlike-price">
+                  <span>1.064.390đ</span>
+                  <span>846.476đ</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="youlike-item">
+            <a href="#">
+              <div class="youlike-item-header">
+                <img
+                  src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHJlc29ydHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                  alt=""
+                />
+                <div class="youlike-item-discount">
+                  <span>-12%</span>
+                </div>
+                <div class="youlike-item-icon">
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+              <div class="youlike-item-body">
+                <h6>The Art - Tràng An Bungalow</h6>
+                <div class="youlike-item-star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="youlike-item-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Huyện Hoa Lư</span>
+                </div>
+                <div class="youlike-reviews">
+                  <span>8.6</span>
+                  <p>Tuyệt vời <span>(26 đánh giá)</span></p>
+                </div>
+                <div class="youlike-price">
+                  <span>918.274đ</span>
+                  <span>811.567đ</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="youlike-item">
+            <a href="#">
+              <div class="youlike-item-header">
+                <img
+                  src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHJlc29ydHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                  alt=""
+                />
+                <div class="youlike-item-discount">
+                  <span>-5%</span>
+                </div>
+                <div class="youlike-item-icon">
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+              <div class="youlike-item-body">
+                <h6>Ba Khan Village Resort</h6>
+                <div class="youlike-item-star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="youlike-item-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Huyện Mai Châu</span>
+                </div>
+                <div class="youlike-reviews">
+                  <span>9.2</span>
+                  <p>Tuyệt vời <span>(13 đánh giá)</span></p>
+                </div>
+                <div class="youlike-price">
+                  <span>1.219.782đ</span>
+                  <span>1.160.658đ</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="youlike-item">
+            <a href="#">
+              <div class="youlike-item-header">
+                <img
+                  src="https://images.unsplash.com/photo-1562790351-d273a961e0e9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHJlc29ydHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                  alt=""
+                />
+                <div class="youlike-item-discount">
+                  <span>-5%</span>
+                </div>
+                <div class="youlike-item-icon">
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+              <div class="youlike-item-body">
+                <h6>Radisson Blu Resort Cam Ranh</h6>
+                <div class="youlike-item-star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="youlike-item-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Thành phố Cam Ranh</span>
+                </div>
+                <div class="youlike-reviews">
+                  <span>10</span>
+                  <p>Tuyệt vời <span>(61 đánh giá)</span></p>
+                </div>
+                <div class="youlike-price">
+                  <span>1.590.252đ</span>
+                  <span>1.516.731đ</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="youlike-item">
+            <a href="#">
+              <div class="youlike-item-header">
+                <img
+                  src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHJlc29ydHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                  alt=""
+                />
+                <div class="youlike-item-discount">
+                  <span>-5%</span>
+                </div>
+                <div class="youlike-item-icon">
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+              <div class="youlike-item-body">
+                <h6>Radisson Blu Resort Cam Ranh</h6>
+                <div class="youlike-item-star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="youlike-item-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Thành phố Cam Ranh</span>
+                </div>
+                <div class="youlike-reviews">
+                  <span>10</span>
+                  <p>Tuyệt vời <span>(61 đánh giá)</span></p>
+                </div>
+                <div class="youlike-price">
+                  <span>1.590.252đ</span>
+                  <span>1.516.731đ</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Mall -->
+      <div class="mall">
+        <div class="mall-wrap">
+          <div class="mall-header">
+            <h2>mytour.<span>Mall</span></h2>
+            <p>Các thương hiệu khách sạn đối tác hàng đầu</p>
+          </div>
+          <div class="mall-body">
+            <div class="mall-item">
+              <div class="mall-img">
+                <img
+                  src="https://images.unsplash.com/photo-1597811209390-e674b6a68775?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dmlucGVhcmwlMjBuaGElMjB0cmFuZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                  alt=""
+                />
+              </div>
+              <img src="./img/tải xuống.png" alt="" />
+            </div>
+            <div class="mall-item">
+              <div class="mall-img">
+                <img src="./img/tải xuống2.jfif" alt="" />
+              </div>
+              <img src="./img/tải xuống3.jfif" alt="" />
+            </div>
+            <div class="mall-item">
+              <div class="mall-img">
+                <img
+                  src="https://images.unsplash.com/photo-1490907452017-eccf91f84cf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bm92b3RlbCUyMG5oYSUyMHRyYW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                  alt=""
+                />
+              </div>
+              <img src="./img/tải xuống 4.png" alt="" />
+            </div>
+            <div class="mall-item">
+              <div class="mall-img">
+                <img src="./img/tải xuống5.jfif" alt="" />
+              </div>
+              <img src="./img/tải xuống 7.png" alt="" />
+            </div>
+          </div>
+          <div class="mail-footer">
+            <button>Khám phá ngay</button>
+          </div>
+        </div>
+      </div>
+      <!-- hotel -->
+      <div class="hotel">
+        <div class="hotel-wrap">
+          <div class="hotel-header">
+            <p>Khách sạn giá tốt chỉ có trên Mytour</p>
+            <div class="hotel-button">
+              <button data-filter="hcm" class="btn active">Hồ Chí Minh</button>
+              <button data-filter="hn" class="btn">Hà Nội</button>
+              <button data-filter="dn" class="btn">Đà Nẵng</button>
+              <button data-filter="dl" class="btn">Đà Lạt</button>
+              <button data-filter="brvt" class="btn">Bà Rịa - Vũng Tàu</button>
+              <button data-filter="nt" class="btn">Nha Trang</button>
+              <button data-filter="ha" class="btn">Hội An</button>
+            </div>
+          </div>
+          <div class="hotel-body">
+            <div class="youlike-item hcm active">
+              <a href="#">
+                <div class="youlike-item-header">
+                  <img
+                    src="https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8aG90ZWx8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <div class="youlike-item-discount">
+                    <span>-5%</span>
+                  </div>
+                  <div class="youlike-item-icon">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="youlike-item-body">
+                  <h6>Khách sạn A&Em Signature</h6>
+                  <div class="youlike-item-star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <div class="youlike-star-more">
+                      <span
+                        >Số sao đánh giá này do nơi lưu trú cung cấp, phản ánh
+                        sự thoải mái, cơ sở vật chất và tiện nghi mà khách hàng
+                        có thể mong đợi</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="youlike-item-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Quận 1</span>
+                  </div>
+                  <div class="youlike-reviews">
+                    <span>7.8</span>
+                    <p>Tuyệt vời <span>(141 đánh giá)</span></p>
+                  </div>
+                  <div class="youlike-price">
+                    <span>1.863.803đ</span>
+                    <span>1.778.549đ</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="youlike-item hcm active">
+              <a href="#">
+                <div class="youlike-item-header">
+                  <img
+                    src="https://images.unsplash.com/photo-1590074072786-a66914d668f1?ixid=MnwxMjA3fDF8MHxzZWFyY2h8OHx8aG90ZWx8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <div class="youlike-item-discount">
+                    <span>-67%</span>
+                  </div>
+                  <div class="youlike-item-icon">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="youlike-item-body">
+                  <h6>Khách sạn Sofitel Plaza Sài Gòn</h6>
+                  <div class="youlike-item-star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <div class="youlike-star-more">
+                      <span
+                        >Số sao đánh giá này do nơi lưu trú cung cấp, phản ánh
+                        sự thoải mái, cơ sở vật chất và tiện nghi mà khách hàng
+                        có thể mong đợi</span
+                      >
+                    </div>
+                  </div>
+                  <div class="youlike-item-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Quận 1</span>
+                  </div>
+                  <div class="youlike-reviews">
+                    <span>8.8</span>
+                    <p>Tuyệt vời <span>(450 đánh giá)</span></p>
+                  </div>
+                  <div class="youlike-price">
+                    <span>4.403.629đ</span>
+                    <span>1.474.839đ</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="youlike-item hcm active">
+              <a href="#">
+                <div class="youlike-item-header">
+                  <img
+                    src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aG90ZWx8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <div class="youlike-item-discount">
+                    <span>-9%</span>
+                  </div>
+                  <div class="youlike-item-icon">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="youlike-item-body">
+                  <h6>Khách sạn Âu Lạc Charner</h6>
+                  <div class="youlike-item-star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <div class="youlike-star-more">
+                      <span
+                        >Số sao đánh giá này do nơi lưu trú cung cấp, phản ánh
+                        sự thoải mái, cơ sở vật chất và tiện nghi mà khách hàng
+                        có thể mong đợi</span
+                      >
+                    </div>
+                  </div>
+                  <div class="youlike-item-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Quận 1</span>
+                  </div>
+                  <div class="youlike-reviews">
+                    <span>9.2</span>
+                    <p>Tuyệt vời <span>(120 đánh giá)</span></p>
+                  </div>
+                  <div class="youlike-price">
+                    <span>2.445.251đ</span>
+                    <span>2.247.446đ</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="youlike-item hcm active">
+              <a href="#">
+                <div class="youlike-item-header">
+                  <img
+                    src="https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWx8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <div class="youlike-item-discount">
+                    <span>-5%</span>
+                  </div>
+                  <div class="youlike-item-icon">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="youlike-item-body">
+                  <h6>Khách Sạn Mai House Sài Gòn</h6>
+                  <div class="youlike-item-star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <div class="youlike-star-more">
+                      <span
+                        >Số sao đánh giá này do nơi lưu trú cung cấp, phản ánh
+                        sự thoải mái, cơ sở vật chất và tiện nghi mà khách hàng
+                        có thể mong đợi</span
+                      >
+                    </div>
+                  </div>
+                  <div class="youlike-item-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Quận 3</span>
+                  </div>
+                  <div class="youlike-reviews">
+                    <span>9.4</span>
+                    <p>Tuyệt vời <span>(84 đánh giá)</span></p>
+                  </div>
+                  <div class="youlike-price">
+                    <span>1.148.079đ</span>
+                    <span>1.092.586đ</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="youlike-item hcm active">
+              <a href="#">
+                <div class="youlike-item-header">
+                  <img
+                    src="https://images.unsplash.com/photo-1455587734955-081b22074882?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGhvdGVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <div class="youlike-item-discount">
+                    <span>-10%</span>
+                  </div>
+                  <div class="youlike-item-icon">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="youlike-item-body">
+                  <h6>Khách sạn Park Hyatt Sài Gòn</h6>
+                  <div class="youlike-item-star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <div class="youlike-star-more">
+                      <span
+                        >Số sao đánh giá này do nơi lưu trú cung cấp, phản ánh
+                        sự thoải mái, cơ sở vật chất và tiện nghi mà khách hàng
+                        có thể mong đợi</span
+                      >
+                    </div>
+                  </div>
+                  <div class="youlike-item-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Quận 1</span>
+                  </div>
+                  <div class="youlike-reviews">
+                    <span>9.6</span>
+                    <p>Tuyệt vời <span>(430 đánh giá)</span></p>
+                  </div>
+                  <div class="youlike-price">
+                    <span>5.316.256đ</span>
+                    <span>4.826.112đ</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="youlike-item hcm active">
+              <a href="#">
+                <div class="youlike-item-header">
+                  <img
+                    src="https://images.unsplash.com/photo-1541971875076-8f970d573be6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGhvdGVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <!-- <div class="youlike-item-discount">
+                                    <span>-5%</span>
+                                </div> -->
+                  <div class="youlike-item-icon">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="youlike-item-body">
+                  <h6>Khách Sạn House & Caffeine</h6>
+                  <div class="youlike-item-star">
+                    <i class="fas fa-star"></i>
+                    <div class="youlike-star-more">
+                      <span
+                        >Số sao đánh giá này do nơi lưu trú cung cấp, phản ánh
+                        sự thoải mái, cơ sở vật chất và tiện nghi mà khách hàng
+                        có thể mong đợi</span
+                      >
+                    </div>
+                  </div>
+                  <div class="youlike-item-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Quận 1</span>
+                  </div>
+                  <div class="youlike-reviews">
+                    <span>7.0</span>
+                    <p>Tuyệt vời <span>(10 đánh giá)</span></p>
+                  </div>
+                  <!-- <div class="youlike-price">
+                                    <span>1.590.252đ</span>
+                                    <span>1.516.731đ</span>
+                                </div> -->
+                </div>
+              </a>
+            </div>
+            <div class="youlike-item hcm active">
+              <a href="#">
+                <div class="youlike-item-header">
+                  <img
+                    src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGhvdGVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <div class="youlike-item-discount">
+                    <span>-5%</span>
+                  </div>
+                  <div class="youlike-item-icon">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="youlike-item-body">
+                  <h6>Khách Sạn Blue Diamond</h6>
+                  <div class="youlike-item-star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <div class="youlike-star-more">
+                      <span
+                        >Số sao đánh giá này do nơi lưu trú cung cấp, phản ánh
+                        sự thoải mái, cơ sở vật chất và tiện nghi mà khách hàng
+                        có thể mong đợi</span
+                      >
+                    </div>
+                  </div>
+                  <div class="youlike-item-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Quận 1</span>
+                  </div>
+                  <div class="youlike-reviews">
+                    <span>8.0</span>
+                    <p>Tuyệt vời <span>(323 đánh giá)</span></p>
+                  </div>
+                  <div class="youlike-price">
+                    <span>1.329.017đ</span>
+                    <span>1.265.385đ</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="youlike-item hcm active">
+              <a href="#">
+                <div class="youlike-item-header">
+                  <img
+                    src="https://images.unsplash.com/photo-1498503182468-3b51cbb6cb24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGhvdGVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <div class="youlike-item-discount">
+                    <span>-53%</span>
+                  </div>
+                  <div class="youlike-item-icon">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="youlike-item-body">
+                  <h6>Khách sạn Renaissance Riverside Sài Gòn</h6>
+                  <div class="youlike-item-star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <div class="youlike-star-more">
+                      <span
+                        >Số sao đánh giá này do nơi lưu trú cung cấp, phản ánh
+                        sự thoải mái, cơ sở vật chất và tiện nghi mà khách hàng
+                        có thể mong đợi</span
+                      >
+                    </div>
+                  </div>
+                  <div class="youlike-item-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Quận 1</span>
+                  </div>
+                  <div class="youlike-reviews">
+                    <span>8.6</span>
+                    <p>Tuyệt vời <span>(300 đánh giá)</span></p>
+                  </div>
+                  <div class="youlike-price">
+                    <span>3.303.473đ</span>
+                    <span>1.579.567đ</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="youlike-item hn">
+              <a href="#">
+                <div class="youlike-item-header">
+                  <img
+                    src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDR8fGhvdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <div class="youlike-item-discount">
+                    <span>-70%</span>
+                  </div>
+                  <div class="youlike-item-icon">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="youlike-item-body">
+                  <h6>Khách Sạn La Siesta Classic Lò Sũ</h6>
+                  <div class="youlike-item-star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <div class="youlike-star-more">
+                      <span
+                        >Số sao đánh giá này do nơi lưu trú cung cấp, phản ánh
+                        sự thoải mái, cơ sở vật chất và tiện nghi mà khách hàng
+                        có thể mong đợi</span
+                      >
+                    </div>
+                  </div>
+                  <div class="youlike-item-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Quận Hoàn Kiếm</span>
+                  </div>
+                  <div class="youlike-reviews">
+                    <span>9.4</span>
+                    <p>Tuyệt vời <span>(185 đánh giá)</span></p>
+                  </div>
+                  <div class="youlike-price">
+                    <span>2.057.504đ</span>
+                    <span>637.021đ</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="youlike-item hn">
+              <a href="#">
+                <div class="youlike-item-header">
+                  <img
+                    src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGhvdGVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <div class="youlike-item-discount">
+                    <span>-9%</span>
+                  </div>
+                  <div class="youlike-item-icon">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="youlike-item-body">
+                  <h6>Pan Horizon Executive Residences</h6>
+                  <div class="youlike-item-star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <div class="youlike-star-more">
+                      <span
+                        >Số sao đánh giá này do nơi lưu trú cung cấp, phản ánh
+                        sự thoải mái, cơ sở vật chất và tiện nghi mà khách hàng
+                        có thể mong đợi</span
+                      >
+                    </div>
+                  </div>
+                  <div class="youlike-item-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Quận Cầu Giấy</span>
+                  </div>
+                  <div class="youlike-reviews">
+                    <span>8.4</span>
+                    <p>Tuyệt vời <span>(100 đánh giá)</span></p>
+                  </div>
+                  <div class="youlike-price">
+                    <span>1.551.405đ</span>
+                    <span>1.419.914đ</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="youlike-item hn">
+              <a href="#">
+                <div class="youlike-item-header">
+                  <img
+                    src="https://images.unsplash.com/photo-1562133567-b6a0a9c7e6eb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGhvdGVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <div class="youlike-item-discount">
+                    <span>-5%</span>
+                  </div>
+                  <div class="youlike-item-icon">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="youlike-item-body">
+                  <h6>Khách sạn Sunway Hà Nội</h6>
+                  <div class="youlike-item-star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <div class="youlike-star-more">
+                      <span
+                        >Số sao đánh giá này do nơi lưu trú cung cấp, phản ánh
+                        sự thoải mái, cơ sở vật chất và tiện nghi mà khách hàng
+                        có thể mong đợi</span
+                      >
+                    </div>
+                  </div>
+                  <div class="youlike-item-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Quận Hai Bà Trưng</span>
+                  </div>
+                  <div class="youlike-reviews">
+                    <span>8.4</span>
+                    <p>Tuyệt vời <span>(118 đánh giá)</span></p>
+                  </div>
+                  <div class="youlike-price">
+                    <span>2.638.029đ</span>
+                    <span>2.522.112đ</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="youlike-item hn">
+              <a href="#">
+                <div class="youlike-item-header">
+                  <img
+                    src="https://images.unsplash.com/photo-1562790351-d273a961e0e9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGhvdGVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <!-- <div class="youlike-item-discount">
+                                    <span>-53%</span>
+                                </div> -->
+                  <div class="youlike-item-icon">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="youlike-item-body">
+                  <h6>Khách Sạn Sheraton Hanoi</h6>
+                  <div class="youlike-item-star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <div class="youlike-star-more">
+                      <span
+                        >Số sao đánh giá này do nơi lưu trú cung cấp, phản ánh
+                        sự thoải mái, cơ sở vật chất và tiện nghi mà khách hàng
+                        có thể mong đợi</span
+                      >
+                    </div>
+                  </div>
+                  <div class="youlike-item-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Quận Tây Hồ</span>
+                  </div>
+                  <div class="youlike-reviews">
+                    <span>8.6</span>
+                    <p>Tuyệt vời <span>(174 đánh giá)</span></p>
+                  </div>
+                  <div class="youlike-price">
+                    <h3>
+                      Đăng nhập để <span style="color: #ff3366">Giảm 21%</span>
+                    </h3>
+                    <p>Giảm giá cho thành viên</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="youlike-item hn">
+              <a href="#">
+                <div class="youlike-item-header">
+                  <img
+                    src="https://images.unsplash.com/photo-1562790351-d273a961e0e9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGhvdGVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <!-- <div class="youlike-item-discount">
+                                    <span>-53%</span>
+                                </div> -->
+                  <div class="youlike-item-icon">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="youlike-item-body">
+                  <h6>Khách Sạn Sheraton Hanoi</h6>
+                  <div class="youlike-item-star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <div class="youlike-star-more">
+                      <span
+                        >Số sao đánh giá này do nơi lưu trú cung cấp, phản ánh
+                        sự thoải mái, cơ sở vật chất và tiện nghi mà khách hàng
+                        có thể mong đợi</span
+                      >
+                    </div>
+                  </div>
+                  <div class="youlike-item-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Quận Tây Hồ</span>
+                  </div>
+                  <div class="youlike-reviews">
+                    <span>8.6</span>
+                    <p>Tuyệt vời <span>(174 đánh giá)</span></p>
+                  </div>
+                  <div class="youlike-price">
+                    <h3>
+                      Đăng nhập để <span style="color: #ff3366">Giảm 21%</span>
+                    </h3>
+                    <p>Giảm giá cho thành viên</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="youlike-item dn">
+              <a href="#">
+                <div class="youlike-item-header">
+                  <img
+                    src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTd8fGhvdGVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <div class="youlike-item-discount">
+                    <span>-6%</span>
+                  </div>
+                  <div class="youlike-item-icon">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="youlike-item-body">
+                  <h6>Four Points by Sheraton Đà Nẵng</h6>
+                  <div class="youlike-item-star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <div class="youlike-star-more">
+                      <span
+                        >Số sao đánh giá này do nơi lưu trú cung cấp, phản ánh
+                        sự thoải mái, cơ sở vật chất và tiện nghi mà khách hàng
+                        có thể mong đợi</span
+                      >
+                    </div>
+                  </div>
+                  <div class="youlike-item-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Quận Sơn Trà</span>
+                  </div>
+                  <div class="youlike-reviews">
+                    <span>9.4</span>
+                    <p>Tuyệt vời <span>(73 đánh giá)</span></p>
+                  </div>
+                  <div class="youlike-price">
+                    <span>1.001.314đ</span>
+                    <span>951.203đ</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="youlike-item dn">
+              <a href="#">
+                <div class="youlike-item-header">
+                  <img
+                    src="https://images.unsplash.com/photo-1537833633404-f02da1734a6b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fGhvdGVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <div class="youlike-item-discount">
+                    <span>-5%</span>
+                  </div>
+                  <div class="youlike-item-icon">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="youlike-item-body">
+                  <h6>Pullman Danang Beach Resort</h6>
+                  <div class="youlike-item-star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <div class="youlike-star-more">
+                      <span
+                        >Số sao đánh giá này do nơi lưu trú cung cấp, phản ánh
+                        sự thoải mái, cơ sở vật chất và tiện nghi mà khách hàng
+                        có thể mong đợi</span
+                      >
+                    </div>
+                  </div>
+                  <div class="youlike-item-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Quận Ngũ Hành Sơn</span>
+                  </div>
+                  <div class="youlike-reviews">
+                    <span>9.2</span>
+                    <p>Tuyệt vời <span>(430 đánh giá)</span></p>
+                  </div>
+                  <div class="youlike-price">
+                    <span>2.201.974đ</span>
+                    <span>2.103.203đ</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="hotel-footer">
+            <button>Xem tất cả</button>
+          </div>
+        </div>
+      </div>
+      <div class="destination">
+        <div class="destination-container">
+          <p>Điểm đến yêu thích</p>
+          <p>Địa điểm hot nhất do Mytour đề xuất</p>
+          <div class="destination-content">
+            <div
+              class="destination-item"
+              style="top: 167px; left: 0; width: 266px; height: 266px"
+            >
+              <a href="#">
+                <div class="destination-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1535952548450-d7447587e733?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aG9jaGltaW5oJTIwY2l0eXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt="Ho Chi Minh City"
+                  />
+                  <div class="destination-name">
+                    <p>Hồ Chí Minh</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="destination-item"
+              style="top: 23px; left: 258px; width: 163px; height: 163px"
+            >
+              <a href="#">
+                <div class="destination-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1547158291-06774526756c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGhhbm9pfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt="Hà Nội"
+                  />
+                  <div class="destination-name">
+                    <p>Hà Nội</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="destination-item"
+              style="top: 198px; left: 320px; width: 163px; height: 163px"
+            >
+              <a href="#">
+                <div class="destination-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1564596823821-79b97151055e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFuYW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt="Đà Nẵng"
+                  />
+                  <div class="destination-name">
+                    <p>Đà Nẵng</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="destination-item"
+              style="top: 408px; left: 253px; width: 133px; height: 133px"
+            >
+              <a href="#">
+                <div class="destination-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1552310065-aad9ebece999?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fGRhbGF0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt="Đà Lạt"
+                  />
+                  <div class="destination-name">
+                    <p>Đà Lạt</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="destination-item"
+              style="top: 361px; left: 421px; width: 200px; height: 200px"
+            >
+              <a href="#">
+                <div class="destination-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1602227479385-ab94657944fa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGhvaWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt="Hội An"
+                  />
+                  <div class="destination-name">
+                    <p>Hội An</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="destination-item"
+              style="top: 12px; left: 473px; width: 266px; height: 266px"
+            >
+              <a href="#">
+                <div class="destination-img">
+                  <img src="./img/tải xuống8.jfif" alt="" />
+                  <div class="destination-name">
+                    <p>Bà Rịa - Vũng Tàu</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="destination-item"
+              style="top: 310px; left: 638px; width: 163px; height: 163px"
+            >
+              <a href="#">
+                <div class="destination-img">
+                  <img
+                    src="https://media.istockphoto.com/photos/panorama-of-the-city-of-nha-trang-in-vietnam-from-drone-point-of-view-picture-id827359312?b=1&k=20&m=827359312&s=170667a&w=0&h=PbFBt2IHeIQVyww9t5xMKM5iXoSALgTDsltkrdnyNCA="
+                    alt=""
+                  />
+                  <div class="destination-name">
+                    <p>Nha Trang</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="destination-item"
+              style="top: 192px; left: 769px; width: 133px; height: 133px"
+            >
+              <a href="#">
+                <div class="destination-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1582651957695-5986ea9576f4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGh1JTIwcXVvY3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <div class="destination-name">
+                    <p>Phú Quốc</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="destination-item"
+              style="top: 259px; left: 892px; width: 266px; height: 266px"
+            >
+              <a href="#">
+                <div class="destination-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1568621411902-83de9891519a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGxhbyUyMGNhaXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <div class="destination-name">
+                    <p>Lào Cai</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="destination-item"
+              style="top: 54px; left: 968px; width: 163px; height: 163px"
+            >
+              <a href="#">
+                <div class="destination-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1580666617058-96354d04c464?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGhhbG9uZyUyMGJheSUyMHZpZXRuYW18ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    alt=""
+                  />
+                  <div class="destination-name">
+                    <p>Hạ Long</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="story">
+        <div class="story-container">
+          <div class="story-header">
+            <div class="story-header-left">
+              <p>Cảm hứng cho những chuyến đi</p>
+              <p>Bí quyết du lịch, những câu chuyện thú vị đang chờ đón bạn</p>
+            </div>
+            <div class="story-header-right">
+              <button>Xem tất cả</button>
+            </div>
+          </div>
+          <div class="story-body">
+            <div class="story-item">
+              <div class="story-img" style="height: 363px">
+                <img src="./img/tải xuống9.jfif" alt="" />
+              </div>
+              <p style="font-size: 20px">
+                Top Những Mẫu Bánh Trung Thu Khách Sạn Hot Nhất Năm 2021
+              </p>
+            </div>
+            <div class="story-item">
+              <div class="story-img">
+                <img
+                  src="https://staticproxy.mytourcdn.com/480x360,q90/resources/pictures/locations/viv1629298216.jpg"
+                  alt=""
+                />
+              </div>
+              <p>
+                Mua bánh trung thu cao cấp ngay giữa mùa dịch siêu dễ dàng, lại
+                còn được giao hàng miễn phí
+              </p>
+            </div>
+            <div class="story-item">
+              <div class="story-img">
+                <img
+                  src="https://staticproxy.mytourcdn.com/480x360,q90/resources/pictures/locations/rrv1625285104.jpg"
+                  alt=""
+                />
+              </div>
+              <p>Điểm du lịch Pleiku khiến bạn muốn xách balo lên và đi ngay</p>
+            </div>
+            <div class="story-item">
+              <div class="story-img">
+                <img
+                  src="https://staticproxy.mytourcdn.com/480x360,q90/resources/pictures/locations/2dt1625214554.jpg"
+                  alt=""
+                />
+              </div>
+              <p>
+                Kết hợp du lịch và chụp ảnh cưới, The Memories liệu có gỡ rối
+                cho các cặp đôi?
+              </p>
+            </div>
+            <div class="story-item">
+              <div class="story-img">
+                <img
+                  src="https://staticproxy.mytourcdn.com/480x360,q90/resources/pictures/locations/xsz1625213557.jpg"
+                  alt=""
+                />
+              </div>
+              <p>
+                Sáng tạo hay là chết, Mytour liều lĩnh mở tour trải nghiệm khám
+                phá
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="download">
+        <div class="download-container">
+          <div class="download-left">
+            <p>Tải ứng dụng Mytour.vn</p>
+            <p>Đặt vé máy bay, khách sạn sang trọng</p>
+            <div class="download-link">
+              <div class="download-qr">
+                <img src="./img/QR.PNG" alt="" />
+              </div>
+              <div class="download-on">
+                <a
+                  href="https://www.apple.com/app-store/"
+                  class="download-on-appstore"
+                  target="_blank"
+                >
+                  <img
+                    src="	https://storage.googleapis.com/tripi-assets/mytour/icons/icon_app_store.svg"
+                    alt=""
+                  />
+                </a>
+                <a href="#" class="download-on-googleplay">
+                  <img
+                    src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_chplay.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="download-center">
+            <img
+              src="https://storage.googleapis.com/tripi-assets/mytour/images/Phone.png"
+              alt=""
+            />
+            <div class="download-center-title">
+              <span>top 10 app travel</span>
+              <div class="download-center-review">
+                <span>4.8</span>
+                <div>
+                  <div class="download-center-star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span>2100 đánh giá</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="download-right">
+            <p>
+              <i class="far fa-check-circle"></i>
+              Giá tốt hơn so với đặt phòng trực tiếp tại khách sạn
+            </p>
+            <p>
+              <i class="far fa-check-circle"></i>
+              Nhân viên chăm sóc, tư vấn nhiều kinh nghiệm
+            </p>
+            <p>
+              <i class="far fa-check-circle"></i>
+              Hơn 5000 khách sạn tại Việt Nam với đánh giá thực
+            </p>
+            <p>
+              <i class="far fa-check-circle"></i>
+              Nhiều chương trình khuyến mãi và tích lũy điểm
+            </p>
+            <p>
+              <i class="far fa-check-circle"></i>
+              Thanh toán dễ dàng, đa dạng
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque fuga
+      porro soluta sapiente, commodi aliquid, dolorem alias sed culpa nam
+      dignissimos quo harum quibusdam quia cum ipsam eum laborum blanditiis.
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque fuga
+      porro soluta sapiente, commodi aliquid, dolorem alias sed culpa nam
+      dignissimos quo harum quibusdam quia cum ipsam eum laborum blanditiis.
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque fuga
+      porro soluta sapiente, commodi aliquid, dolorem alias sed culpa nam
+      dignissimos quo harum quibusdam quia cum ipsam eum laborum blanditiis.
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque fuga
+      porro soluta sapiente, commodi aliquid, dolorem alias sed culpa nam
+      dignissimos quo harum quibusdam quia cum ipsam eum laborum blanditiis.
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque fuga
+      porro soluta sapiente, commodi aliquid, dolorem alias sed culpa nam
+      dignissimos quo harum quibusdam quia cum ipsam eum laborum blanditiis.
+    </p>
+
+    <!-- Chat -->
+    <div class="chat">
+      <div class="chat-hearder">
+        <p class="chat-header-text">Chat cùng Mytour</p>
+        <i class="fas fa-plus"></i>
+      </div>
+      <div class="chat-content">
+        <div class="chat-content-top">
+          <div class="chat-content-img">
+            <svg width="40" height="40" fill="none">
+              <rect
+                opacity="0.1"
+                width="40"
+                height="40"
+                rx="20"
+                fill="#FF1284"
+              ></rect>
+              <g clip-path="url(#ic_avatar_svg__clip0)">
+                <path
+                  d="M32 22.251a4.493 4.493 0 00-3-4.239v-.761a9 9 0 10-18 0v.761a4.5 4.5 0 000 8.488 1.5 1.5 0 002-1.42v-7.829a7 7 0 0114 0v7.829a1.495 1.495 0 00.5 1.1v.568c0 1.474-1.291 2-2.5 2h-1.778a2 2 0 100 2H25c2.649 0 4.5-1.645 4.5-4v-.478a4.5 4.5 0 002.5-4.019z"
+                  fill="#FF1284"
+                ></path>
+              </g>
+              <defs>
+                <clipPath id="ic_avatar_svg__clip0">
+                  <path
+                    fill="#fff"
+                    transform="translate(8 8)"
+                    d="M0 0h24v24H0z"
+                  ></path>
+                </clipPath>
+              </defs>
+            </svg>
+            <div></div>
+          </div>
+          <div class="chat-content-name">
+            <p>Trần ABC</p>
+            <p>Chuyên viên CSKH</p>
+          </div>
+          <div class="chat-content-like">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              class="like-icon disable-icon"
+              style="cursor: not-allowed"
+            >
+              <path
+                d="M4.6 17.8c.421.007.84.07 1.246.185l2.907.83c.429.123.872.185 1.318.185h3.908a4.8 4.8 0 004.776-4.32l.24-4.08a3.6 3.6 0 00-2.72-3.675L15.11 6.67a1.2 1.2 0 01-.911-1.164V2.8a1.8 1.8 0 00-3.6 0v1.243a6 6 0 01-6 6v7.758z"
+                stroke="#1A202C"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M1 8.2h3.6V19H1V8.2z"
+                stroke="#1A202C"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              class="dislike-icon disable-icon"
+              style="margin-left: 8px; cursor: not-allowed"
+            >
+              <path
+                d="M15.4 2.198a4.763 4.763 0 01-1.247-.183l-2.907-.83A4.8 4.8 0 009.93 1H6.02a4.8 4.8 0 00-4.776 4.32l-.24 4.08a3.6 3.6 0 002.72 3.675l1.164.255a1.2 1.2 0 01.91 1.164V17.2a1.8 1.8 0 003.6 0v-1.243a6 6 0 016-6V2.198zM15.4 1H19v10.8h-3.6V1z"
+                stroke="#1A202C"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div class="chat-content-center">
+          <svg width="72" height="72" fill="none" style="margin-bottom: 24px">
+            <path
+              d="M.535 11.342c0-6.32 5.169-11.432 11.51-11.34C18.185.09 23.18 5.125 23.218 11.268a11.314 11.314 0 01-3.888 8.62.492.492 0 00.073.796l2.137 1.265c.345.204.2.734-.201.734l-9.678-.003C5.498 22.567.535 17.534.535 11.341z"
+              fill="#69D8FC"
+            ></path>
+            <path
+              d="M21.54 21.95l-2.138-1.265a.492.492 0 01-.076-.793 11.315 11.315 0 003.89-8.733C23.12 5.129 18.24.18 12.214.005a11.43 11.43 0 00-2.493.2c5.21.998 9.18 5.59 9.214 11.064a11.292 11.292 0 01-2.384 7.03c-.91 1.171-.615 2.869.662 3.624l.044.027c.342.202.204.721-.188.732l4.269.001c.401 0 .547-.53.201-.733z"
+              fill="#4BCBF5"
+            ></path>
+            <path
+              d="M55.799 41.169h-25.73c-6.426 0-9.943-7.49-5.838-12.434l.228-.276a12.136 12.136 0 002.798-7.751v-4.962C27.257 7.05 34.307 0 43.003 0 51.7 0 58.75 7.05 58.75 15.746v5.13c0 2.86 1.011 5.629 2.854 7.817 4.155 4.935.647 12.476-5.804 12.476z"
+              fill="#718096"
+            ></path>
+            <path
+              d="M69.324 53.92v17.01h-52.78V54.048a9.498 9.498 0 015.813-8.754l8.52-3.704 2.87-1.248a5.961 5.961 0 003.584-5.467v-1.101h11.206v1.045a5.962 5.962 0 003.614 5.478l11.524 4.94a9.496 9.496 0 015.65 8.683z"
+              fill="#fff"
+            ></path>
+            <path
+              d="M30.879 45.646a40.855 40.855 0 0012.405 1.704 40.846 40.846 0 0011.71-1.93l1.39-3.309-4.231-1.813a5.962 5.962 0 01-3.613-5.48v-1.044H37.333v1.101a5.962 5.962 0 01-3.584 5.467l-3.427 1.49.557 3.814z"
+              fill="#FFCEBF"
+            ></path>
+            <path
+              d="M63.675 45.237l-8.681-3.72h-.002V70.93h14.332V53.92a9.497 9.497 0 00-5.65-8.683zM30.877 41.59v29.34H16.545V54.048a9.498 9.498 0 015.812-8.754l8.52-3.704z"
+              fill="#FE85BF"
+            ></path>
+            <path
+              d="M46.82 39.925c1.29 0 2.518-.259 3.638-.726a5.96 5.96 0 01-1.919-4.38v-1.045H37.333v1.101a5.95 5.95 0 01-.523 2.437 9.422 9.422 0 006.523 2.613h3.487z"
+              fill="#FFB09E"
+            ></path>
+            <path
+              d="M54.135 16.916v9.27a9.457 9.457 0 01-9.456 9.458H41.19a9.457 9.457 0 01-9.457-9.457v-9.27a6.152 6.152 0 016.152-6.153h10.097a6.152 6.152 0 016.152 6.152z"
+              fill="#FFCEBF"
+            ></path>
+            <path
+              d="M54.136 21.74c-.004.013-.01.025-.013.038-.342 1.18-1.24 3.41-3.407 5.082a9.528 9.528 0 01-3.423 1.673 1.07 1.07 0 10.544 2.07 11.66 11.66 0 004.186-2.047 11.46 11.46 0 002.107-2.12c.002-.083.006-.165.006-.249V21.74z"
+              fill="#7A6D79"
+            ></path>
+            <path
+              d="M46.12 31.491h-2.508a2.067 2.067 0 010-4.135h2.509a2.067 2.067 0 010 4.135z"
+              fill="#685E68"
+            ></path>
+            <path
+              d="M45.17 8.31c.24-3.029 3.14-5.039 5.916-6.08 4.591 2.751 7.665 7.774 7.665 13.516v1.083a12.748 12.748 0 01-4.477.137c-5.732-.764-9.394-4.997-9.104-8.656z"
+              fill="#4A5568"
+            ></path>
+            <path
+              d="M43.004 0c3.556 0 6.837 1.18 9.473 3.168-1.315 2.288-4.335 6.812-9.997 10.16a27.866 27.866 0 01-10.607 3.638h-4.615v-1.22C27.258 7.05 34.308 0 43.004 0z"
+              fill="#718096"
+            ></path>
+            <path
+              d="M60.605 70.93H26.341l-1.89-17.828a2.14 2.14 0 012.13-2.367h33.786a2.14 2.14 0 012.128 2.367l-1.89 17.828z"
+              fill="#E2E8F0"
+            ></path>
+            <path
+              d="M60.365 50.735h-4.281a2.14 2.14 0 012.129 2.367l-1.89 17.828h4.281l1.89-17.828a2.14 2.14 0 00-2.129-2.367z"
+              fill="#D2DBE6"
+            ></path>
+            <path
+              d="M70.945 72H1.055a1.055 1.055 0 110-2.11h69.89a1.055 1.055 0 110 2.11z"
+              fill="#CBD5E0"
+            ></path>
+            <path
+              d="M43.474 63.83a2.997 2.997 0 100-5.995 2.997 2.997 0 000 5.994z"
+              fill="#D2DBE5"
+            ></path>
+            <path
+              d="M7.596 12.412a1.07 1.07 0 100-2.14 1.07 1.07 0 000 2.14zM11.877 12.412a1.07 1.07 0 100-2.14 1.07 1.07 0 000 2.14zM16.158 12.412a1.07 1.07 0 100-2.14 1.07 1.07 0 000 2.14z"
+              fill="#fff"
+            ></path>
+          </svg>
+          <p>
+            Xin chào <b>Quý khách</b><br />Mình là <b>Trần ABC</b>, chuyên viên
+            chăm sóc khách hàng. Mình có thể giúp gì được cho anh, chị?
+          </p>
+        </div>
+        <div class="chat-content-bottom">
+          <button>Chát ngay bây giờ</button>
+        </div>
+      </div>
+    </div>
+    <!-- Login -->
+    <div class="login">
+      <div class="login-wrap">
+        <div class="login-close">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="login-content">
+          <h2>Đăng nhập</h2>
+          <div class="login-with">
+            <svg width="36" height="36" fill="none">
+              <path
+                d="M18 28.542c5.822 0 10.542-4.72 10.542-10.542S23.822 7.458 18 7.458 7.458 12.178 7.458 18 12.178 28.542 18 28.542z"
+                fill="#1877F2"
+              ></path>
+              <path
+                d="M22.104 21.047L22.57 18h-2.924v-1.977c0-.834.409-1.647 1.718-1.647h1.33v-2.594a16.18 16.18 0 00-2.36-.206c-2.408 0-3.982 1.46-3.982 4.102V18h-2.677v3.047h2.677v7.366c1.091.171 2.203.171 3.294 0v-7.366h2.457z"
+                fill="#fff"
+              ></path>
+            </svg>
+            <span>Đăng nhập bằng Facebook</span>
+          </div>
+          <div class="login-with">
+            <svg width="36" height="36" fill="none">
+              <path
+                d="M18.498 11.795a6.17 6.17 0 013.983 1.454l3.12-2.972a10.485 10.485 0 00-16.507 3.062l3.519 2.712a6.211 6.211 0 015.885-4.256z"
+                fill="#D94F3D"
+              ></path>
+              <path
+                d="M12.295 17.998c0-.662.108-1.32.318-1.947l-3.519-2.712a10.467 10.467 0 000 9.318l3.519-2.712a6.174 6.174 0 01-.318-1.947z"
+                fill="#F2C042"
+              ></path>
+              <path
+                d="M28.567 16.09H18.546v4.294h5.678a5.119 5.119 0 01-2.173 2.94l3.49 2.692c2.232-2.002 3.542-5.258 3.026-9.927z"
+                fill="#5085ED"
+              ></path>
+              <path
+                d="M22.05 23.324a6.67 6.67 0 01-3.552.877 6.211 6.211 0 01-5.886-4.256l-3.518 2.712a10.51 10.51 0 009.404 5.84c2.573.07 5.081-.815 7.042-2.482l-3.49-2.69z"
+                fill="#57A75C"
+              ></path>
+            </svg>
+            <span>Đăng nhập bằng Google</span>
+          </div>
+          <span>Hãy đăng nhập bằng số điện thoại, email</span>
+          <form action="">
+            <div class="login-input">
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Nhập số điện thoại hoặc email"
+                required
+              />
+              <div class="input-password">
+                <input type="password" placeholder="Mật khẩu" required />
+                <i class="fas fa-eye-slash" title="show password"></i>
+              </div>
+            </div>
+            <div class="login-btn">
+              <button type="submit">Đăng nhập</button>
+            </div>
+            <span class="reset-password">Khôi phục mật khẩu</span>
+            <div class="login-bottom">
+              <p>Chưa có tài khoản? <span>Đăng kí tài khoản</span></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./slider.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
